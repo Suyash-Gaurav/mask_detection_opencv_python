@@ -8,13 +8,13 @@ while True:
 
     for x, y, w, h in face:
         count+=1
-        name='./images/mask/' + str(count) +".jpg"
+        name ='./images/mask/' + str(count) +".jpg"
         print ('creating images.............'+ name)
         cv2.imwrite(name,vid[y:y+h,x:x+w])
         cv2.rectangle(vid, (x, y), (x + w, y+h), (0, 255, 0), 3)
     cv2.imshow("vid", vid)
     k = cv2.waitKey(1)
-    if count ==500 :
+    if count == 5000:
         break
 
 
